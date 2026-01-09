@@ -25,4 +25,5 @@ The project focuses on a **sleek, premium UI**, smooth animations, and a futuris
 - **Font Awesome / SVG Icons**
 - **AOS (Animate On Scroll)**
 
+[Check it out live](ardinexatech.netlify.app)
 
