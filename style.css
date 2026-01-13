@@ -1161,135 +1161,6 @@ header .container .content .extra-nav .bag:hover {
 }
 
 
-/* footer {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  overflow: hidden;
-}
-
-footer .container {
-  padding: 4rem;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  gap: 4rem;
-}
-
-footer .container .profile {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 25%;
-}
-
-footer .container .link-container {
-  width: 70%;
-  display: flex;
-  gap: 4rem;
-}
-
-footer .container .link-container .information,
-footer .container .link-container .resource,
-footer .container .link-container .navigation {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 30%;
-}
-
-footer .container .profile .logo {
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  gap: 4px;
-}
-
-footer .container .profile .logo a {
-  font: italic bold 1.4rem var(--aud);
-  color: var(--white);
-}
-
-footer .container .profile .logo a span {
-    color: var(--primary);
-}
-
-footer .container .profile p {
-  font-weight: 400;
-  margin-bottom: 8px;
-}
-
-footer .container .profile .social-media-container {
-  display: flex;
-  gap: 8px;
-}
-
-footer .container .profile .social-media-container .social-media {
-  cursor: pointer;
-  width: 35px;
-  height: 35px;
-  padding: 6px;
-  border-radius: 50%;
-  background-color: var(--black);
-  transition: transform 1s linear;
-}
-
-footer .container .profile .social-media-container .social-media:hover {
-  transform: rotateY(360deg);
-}
-
-footer .container .link-container .information h1,
-footer .container .link-container .resource h1,
-footer .container .link-container .navigation h1 {
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--white);
-  height: 50px;
-  display: flex;
-  align-items: center;
-}
-
-footer .container .link-container .information ul,
-footer .container .link-container .resource ul,
-footer .container .link-container .navigation ul {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-footer .container .link-container .information ul li,
-footer .container .link-container .resource ul li,
-footer .container .link-container .navigation ul li {
-  cursor: pointer;
-}
-
-footer .container .link-container .information ul li::after,
-footer .container .link-container .resource ul li::after,
-footer .container .link-container .navigation ul li::after {
-  content: "";
-  display: block;
-  border-bottom: 3px solid var(--white);
-  width: 40%;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.6s linear;
-  margin-top: 4px;
-}
-
-footer .container .link-container .information ul li:hover::after,
-footer .container .link-container .resource ul li:hover::after,
-footer .container .link-container .navigation ul li:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-  transition: transform 0.6s linear;
-}
-
-footer .container .link-container .information ul li a,
-footer .container .link-container .resource ul li a,
-footer .container .link-container .navigation ul li a {
-  color: var(--white);
-  text-decoration: none;
-} */
 
 
 .reviews {
@@ -1382,5 +1253,286 @@ footer .container .link-container .navigation ul li a {
 @media (max-width: 950px) {
   .reviews-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   RESPONSIVE FIXES (ADD LAST)
+   Keeps desktop same, improves mobile/tablet
+   ========================= */
+
+/* Large tablets / small laptops */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 3rem;
+  }
+
+  .hero .container .content .title {
+    font-size: 7rem;
+  }
+
+  .hero .container .content img {
+    left: 20%;
+    width: 70%;
+  }
+
+  .product-1 .container .content,
+  .product-2 .container .content,
+  .product-3 .container .content {
+    gap: 2rem;
+  }
+
+  .product-1 .container .content .left-side .name,
+  .product-2 .container .content .left-side .name,
+  .product-3 .container .content .left-side .name {
+    font-size: 2.6rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  /* Header becomes tighter */
+  header {
+    height: auto;
+    padding: 0.9rem 0;
+  }
+
+  header .container .content {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  header .container .content nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  header .container .content .extra-nav {
+    margin-left: auto;
+    gap: 1rem;
+  }
+
+  header .container .content .extra-nav button {
+    width: 130px;
+    padding: 8px 10px;
+  }
+
+  /* HERO adjustments (doesn't change desktop) */
+  .hero .container .content {
+    padding-top: 0;
+    align-items: center;
+  }
+
+  .hero .container .content .title {
+    bottom: 55%;
+    font-size: 5.2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero .container .content img {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 12%;
+    width: 86%;
+  }
+
+  .hero .container .content .short-desc-1 {
+    top: 18%;
+    left: 0;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .hero .container .content .short-desc-1 p {
+    width: 60%;
+    font-size: 1rem;
+  }
+
+  .hero .container .content .short-desc-1 hr {
+    width: 40%;
+  }
+
+  .hero .container .content .short-desc-2 {
+    top: 28%;
+    right: 0;
+    width: 100%;
+    padding: 0 1rem;
+    justify-content: flex-end;
+  }
+
+  .hero .container .content .short-desc-2 p {
+    width: 60%;
+    font-size: 1rem;
+  }
+
+  .hero .container .content .short-desc-2 hr {
+    width: 40%;
+  }
+
+  /* Products: keep visuals, just stack */
+  .product-1,
+  .product-2,
+  .product-3 {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+
+  .product-1 .container .content,
+  .product-2 .container .content,
+  .product-3 .container .content {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .product-2 .container .content {
+    flex-direction: column; /* remove reverse on mobile */
+  }
+
+  .product-1 .container .content .left-side,
+  .product-2 .container .content .left-side,
+  .product-3 .container .content .left-side,
+  .product-1 .container .content .right-side,
+  .product-2 .container .content .right-side,
+  .product-3 .container .content .right-side {
+    width: 100%;
+  }
+
+  .product-1 .container .content .right-side,
+  .product-2 .container .content .right-side,
+  .product-3 .container .content .right-side {
+    min-height: 320px;
+  }
+
+  .product-1 .container .content .right-side img,
+  .product-2 .container .content .right-side img,
+  .product-3 .container .content .right-side img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .product-2 .container .content .right-side img {
+    width: 100%;
+  }
+
+  .product-1 .container .content .right-side img {
+    width: 100%;
+  }
+
+  /* Features wrap nicely */
+  .product-1 .container .content .left-side .action-feature-container .features,
+  .product-2 .container .content .left-side .action-feature-container .features {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .product-1 .container .content .left-side .action-feature-container .features .feature,
+  .product-2 .container .content .left-side .action-feature-container .features .feature {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+  }
+
+  /* About */
+  #about {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+
+  .about .right-side {
+    padding: 0 1.5rem;
+  }
+
+  .about .right-side .row-2 {
+    font-size: 3rem;
+  }
+
+  /* Subsidies */
+  .subsidies .content {
+    padding: 0 1.5rem;
+    height: auto;
+    min-height: 50vh;
+    text-align: center;
+  }
+
+  .subsidies .content h1 {
+    font-size: 2.6rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 560px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Header: hide big button on very small screens */
+  header .container .content .extra-nav button {
+    display: none;
+  }
+
+  /* HERO */
+  .hero .container .content .title {
+    font-size: 3.4rem;
+    bottom: 58%;
+  }
+
+  .hero .container .content img {
+    width: 92%;
+    bottom: 10%;
+  }
+
+  .hero .container .content .short-desc-1 p,
+  .hero .container .content .short-desc-2 p {
+    font-size: 0.95rem;
+    width: 70%;
+  }
+
+  /* Product text */
+  .product-1 .container .content .left-side .name,
+  .product-2 .container .content .left-side .name,
+  .product-3 .container .content .left-side .name {
+    font-size: 2.1rem;
+  }
+
+  .product-1 .container .content .left-side .action-feature-container .action-price,
+  .product-2 .container .content .left-side .action-feature-container .action-price,
+  .product-3 .container .content .left-side .action-feature-container .action-price {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .product-1 .container .content .left-side .action-feature-container .action-price a,
+  .product-2 .container .content .left-side .action-feature-container .action-price a,
+  .product-3 .container .content .left-side .action-feature-container .action-price a {
+    font-size: 0.95rem;
+  }
+
+  /* Reviews grid already stacks at 950px, just make text comfy */
+  .reviews {
+    padding: 4rem 0;
+  }
+
+  .reviews-head h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Footer spacing */
+  .footer-distributed {
+    padding: 2.5rem 1rem;
+  }
+
+  .footer-center i {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
   }
 }
